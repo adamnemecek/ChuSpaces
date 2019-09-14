@@ -38,3 +38,12 @@ end
 function coltree(c::Chu)
 
 end
+
+@inline Base.size(c::Chu) = size(c.matrix)
+
+
+function choice(a::Chu, b::Chu)
+    K = max(a.K, b.K)
+    size = size(a) .+ size(b)
+
+end
