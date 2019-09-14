@@ -1,5 +1,7 @@
 module ChuSpaces
 
-greet() = print("Hello World!")
+export Context
 
-end # module
+include("chu.jl")
+
+end
