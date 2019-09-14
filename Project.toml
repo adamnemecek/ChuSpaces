@@ -1,0 +1,4 @@
+name = "ChuSpaces"
+uuid = "ede94e08-d705-11e9-2518-319520e8cf1a"
+authors = ["Adam Nemecek <adamnemecek@gmail.com>"]
+version = "0.1.0"
