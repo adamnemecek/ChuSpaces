@@ -1,5 +1,5 @@
 
-
+abstract type Conformable end
 
 struct Context
     k::Int64
@@ -15,9 +15,26 @@ struct Chu
     matrix::Matrix
 
     # standardized version of this space
-    standard::Chu
+    standard::Matrix
 end
 
-function Chu(K::Int64, matrix::Matrix, standard::Bool)
-    
+Chu(K::Int64, matrix::Matrix, standard::Bool) = Chu(K, matrix, standard ? matrix : nothing)
+
+"""
+    Builds tensor unit.
+"""
+Chu(size::Int) = Chu(size, collect(1:size), true)
+
+dual(s::Chu) = Chu(s.K, s.matrix', isnothing(s.standard))
+
+function conform(ctx::Context)::Chu
+
+end
+
+function rowtree(c::Chu)
+
+end
+
+function coltree(c::Chu)
+
 end
